@@ -1,0 +1,15 @@
+1. What is the role of `@RestController` in Spring MVC?
+   `@RestController` marks a class as a web controller whose methods return data directly in the HTTP response body. It combines `@Controller` and `@ResponseBody`, so returned objects are serialized (typically to JSON) instead of rendering a view.
+
+2. What is the difference between `@GetMapping` and `@PostMapping`?
+   `@GetMapping` handles HTTP GET requests and is used to retrieve data without changing server state.
+   `@PostMapping` handles HTTP POST requests and is used to submit data that creates or modifies server-side resources, typically sending data in the request body.
+
+3. How does `@PathVariable` help in handling dynamic URLs?
+   `@PathVariable` binds a value from the URL path to a method parameter. It enables one endpoint to handle requests like `/books/{id}` by extracting the `id` from the URL.
+
+4. When do we use `@RequestParam`?
+   `@RequestParam` is used to read values from the query string or form parameters, such as `/search?title=Java`. It binds those parameter values to method arguments.
+
+5. Can one controller contain multiple request-mapped methods?
+   Yes. A single controller can define multiple methods mapped to different URLs and HTTP methods to handle related operations within the same domain.
